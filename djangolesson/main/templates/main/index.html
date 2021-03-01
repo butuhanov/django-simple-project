@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="features">
+<h1>Главная страница</h1>
+<p>Добро пожаловать
+{% include 'main/testfile.html' %}
+{% include 'main/testfile.html' %}
+{{ title|upper }}
+{{obj.car}}
+</p>
+
+{% for el in values %}
+    {% if el != '121' %}
+        {% filter upper %}
+            <p>{{el}}</p>
+        {% endfilter %}
+    {% endif %}
+{% endfor %}
+
+    <button class="btn btn-warning">в новости</button>
+     </div>
+
+{% endblock %}
+
+{% block title %}Главная страница{% endblock %}
+
